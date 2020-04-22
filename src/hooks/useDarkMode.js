@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import useLocalStorage from "./useLocalStorage";
 
-const useDarkMode = (key) => {
-  const [dark, setDark] = useLocalStorage(true);
+const useDarkMode = () => {
+  const [dark, setDark] = useLocalStorage("darkMode", true);
   useEffect(() => {
     const body = document.querySelector("body");
     if (dark) {
